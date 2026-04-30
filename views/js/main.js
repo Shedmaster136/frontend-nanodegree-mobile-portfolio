@@ -506,7 +506,7 @@ function updatePositions() {
   for (var i = 0; i < items.length; i++) {
     // document.body.scrollTop is no longer supported in Chrome.
     var phase = Math.sin((scrollTop / 1250) + (i % 5));
-    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+    items[i].style.transform = `translateX(${items[i].basicLeft + 100 * phase}px)`;
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
